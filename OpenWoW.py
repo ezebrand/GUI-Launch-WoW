@@ -24,7 +24,14 @@ def get_maximumEffort(event):
     root.destroy()
 
 root = Tk()
-root.geometry("325x175")
+
+windowWidth = root.winfo_reqwidth()
+windowHeight = root.winfo_reqheight()
+
+positionRight = int(root.winfo_screenwidth()/2 - windowWidth/2)
+positionDown = int(root.winfo_screenheight()/2 - windowHeight/2)
+root.geometry("+{}+{}".format(positionRight, positionDown))
+#root.geometry("325x175")
 
 background_image = PhotoImage(file = "C:\\Users\\e_h67\\Desktop\\Git_testing\\Vanilla.gif")
 background_label = Label(root, image=background_image)
@@ -32,15 +39,15 @@ background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 root.title("Vanilla WoW Server Selection")
 
-elysiumButton = Button(root, text="Elysium - Nighthaven")
+elysiumButton = Button(root, text="Elysium - Nighthaven", bg="khaki2")
 elysiumButton.grid(padx=30, pady=15)
 elysiumButton.bind("<Button-1>", get_elysium)
 
-lightsHopeButton = Button(root, text="Light's Hope - Northdale")
+lightsHopeButton = Button(root, text="Light's Hope - Northdale", bg="sandy brown")
 lightsHopeButton.grid(padx=30, pady=15)
 lightsHopeButton.bind("<Button-1>", get_lightsHope)
 
-maximumButton = Button(root, text="Maximum Effort - PTR")
+maximumButton = Button(root, text="Maximum Effort - PTR", bg="thistle4")
 maximumButton.grid(padx=30, pady=15)
 maximumButton.bind("<Button-1>", get_maximumEffort)
 
