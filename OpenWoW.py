@@ -1,36 +1,40 @@
 import subprocess
+from tkinter import *
+from tkinter import ttk
 
-print("""
-***************************
-* Type 1 for WoW Elysium  *
-* Type 2 for Light's Hope *
-* Type 3 for PTR (ME)     *
-***************************
-""")
+def get_elysium(event):
+    file = open("realmlist.wtf","w")
+    file.write("set realmlist logon.elysium-project.org")
+    file.close()
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
 
-file = open("realmlist.wtf","w")
-loop_ctrl = True
+def get_lightsHope(event):
+    file = open("realmlist.wtf","w")
+    file.write("set realmlist logon.lightshope.org")
+    file.close()
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
 
-while loop_ctrl is True:
-    answer = input("Enter choice: ")
+def get_maximumEffort(event):
+    file = open("realmlist.wtf","w")
+    file.write("set realmlist 35.194.35.198")
+    file.close()
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
 
-    if str(answer) == '1':
-        file.write("set realmlist logon.elysium-project.org")
-        subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
-        loop_ctrl = False
-    elif str(answer) == '2':
-        file.write("set realmlist logon.lightshope.org")
-        subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
-        loop_ctrl = False
-    elif str(answer) == '3':
-        file.write("set realmlist 35.194.35.198")
-        subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
-        loop_ctrl = False
-    else:
-        print("Incorrect selection! Try again or type X to exit.")
+root = Tk()
+root.geometry("325x175")
 
-    if answer in ('X','x'):
-        print("Exiting...")
-        break
+root.title("Vanilla WoW Server Selection")
 
-file.close()
+elysiumButton = Button(root, text="Elysium - Nighthaven")
+elysiumButton.grid(padx=30, pady=15)
+elysiumButton.bind("<Button-1>", get_elysium)
+
+lightsHopeButton = Button(root, text="Light's Hope - Northdale")
+lightsHopeButton.grid(padx=30, pady=15)
+lightsHopeButton.bind("<Button-1>", get_lightsHope)
+
+maximumButton = Button(root, text="Maximum Effort - PTR")
+maximumButton.grid(padx=30, pady=15)
+maximumButton.bind("<Button-1>", get_maximumEffort)
+
+root.mainloop()
