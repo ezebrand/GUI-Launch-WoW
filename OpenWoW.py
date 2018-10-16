@@ -6,25 +6,29 @@ def get_elysium(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist logon.elysium-project.org")
     file.close()
-    #subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
     root.destroy()
 
 def get_lightsHope(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist logon.lightshope.org")
     file.close()
-    #subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
     root.destroy()
 
 def get_maximumEffort(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist 35.194.35.198")
     file.close()
-    #subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
     root.destroy()
 
 root = Tk()
 root.geometry("325x175")
+
+background_image = PhotoImage(file = "C:\\Users\\e_h67\\Desktop\\Git_testing\\Vanilla.gif")
+background_label = Label(root, image=background_image)
+background_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 root.title("Vanilla WoW Server Selection")
 
