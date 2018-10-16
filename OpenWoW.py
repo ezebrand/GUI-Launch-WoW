@@ -31,7 +31,7 @@ windowHeight = root.winfo_reqheight()
 positionRight = int(root.winfo_screenwidth()/2 - windowWidth/2)
 positionDown = int(root.winfo_screenheight()/2 - windowHeight/2)
 root.geometry("+{}+{}".format(positionRight, positionDown))
-#root.geometry("325x175")
+root.geometry("325x175")
 
 background_image = PhotoImage(file = "C:\\Users\\e_h67\\Desktop\\Git_testing\\Vanilla.gif")
 background_label = Label(root, image=background_image)
