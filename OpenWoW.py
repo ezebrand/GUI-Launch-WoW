@@ -6,21 +6,21 @@ def get_elysium(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist logon.elysium-project.org")
     file.close()
-    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current_SW_(new)\WoW.exe"])
     root.destroy()
 
 def get_lightsHope(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist logon.lightshope.org")
     file.close()
-    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current_SW_(new)\WoW.exe"])
     root.destroy()
 
 def get_maximumEffort(event):
     file = open("realmlist.wtf","w")
     file.write("set realmlist 35.194.35.198")
     file.close()
-    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current SW (new)\WoW.exe"])
+    subprocess.Popen([r"C:\Users\e_h67\Desktop\Current_SW_(new)\WoW.exe"])
     root.destroy()
 
 root = Tk()
